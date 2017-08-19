@@ -1,30 +1,42 @@
-function loss() {
+$(function () {
+	function loss() {
+		var lossCount = parseInt($("#losses").html());
+		lossCount++;
+		$("#losses").html(lossCount);
+		alert("You lost!!!");
+		resetTheGame();
+	}
+	function win() {
+		var winCount = parseInt($("#wins").html());
+		winCount++;
+		$("#wins").html(winCount);
+		alert("You win!!!");
+		resetTheGame();
 
-	var lossCount = parseInt($("#losses").html());
-	lossCount++;
-	$("#losses").html(lossCount);
+	}
+	function resetTheGame() {
+		$("#total").html("0");
+		$("#computer-number").html(randomize(19, 120));
+		$("#fourCrystals img").each(function (i, el) {
+			$(el).data("randomNumber", randomize(1, 12));
+		});
+	}
 
-}
-function win() {
-	var winCount = parseInt($("#wins").html());
-	winCount++;
-	$("#wins").html(winCount);
+	function randomize(min, max) {
+		var randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+		return randomNumber;
+	}
 
-}
+	resetTheGame();
 
-function randomize(min, max) {
-	var randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
-	return randomNumber;
-}
-var computerNumber = randomize(19, 120);
-
-$("#fourCrystals img").each(function (i, el) {
-	$(el).data("randomNumber", randomize(1, 12));
-	$(el).on("click", function (event) {
+	$("#fourCrystals img").on("click", function (event) {
 		var totalScore = $("#total").html();
 		totalScore = parseInt(totalScore);
-		totalScore += $(el).data("randomNumber");
+		totalScore += $(this).data("randomNumber");
 		$("#total").html(totalScore);
+		var computerNumber = $("#computer-number").html();
+		computerNumber = parseInt(computerNumber);
+		console.log(totalScore, computerNumber);
 		if (computerNumber < totalScore) {
 			loss();
 		}
@@ -34,4 +46,3 @@ $("#fourCrystals img").each(function (i, el) {
 	});
 
 });
-

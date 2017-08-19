@@ -2,3 +2,29 @@
 	height: 200px;
 	margin: 30px;
 }
+
+html, body {
+	background-image: url("../images/symphony.png");
+}
+
+#jumbotron {
+	color: darkmagenta;
+	vertical-align: middle;
+}
+#randoms {
+	background-color: darkmagenta;
+	color: white;
+
+}									   
+#instructions {
+	color: lightseagreen;
+	font-weight: bolder;
+	background-color: white;
+}
+#gametracker {
+	background-color: lightseagreen;
+	opacity: 75%;
+	color: white;
+	font-weight: bold;
+
+}
