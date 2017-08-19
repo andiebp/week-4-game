@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html>
+<head>
+	<title>Page Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="javascript/game.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<div class="container display-3 clear fix" style="color:darkmagenta">
+				<h1>Crystals Collector</h1>
+			</div>
+		</div>
+		<div class="container">
+			<h2>Game Instructions</h2>
+			<p>Let's get him. What's that thing he's on? It's a board with wheels. He's an absolute dream. (Biff and his friends hop into Biff's car and take off after Marty. They manage to catch up to him. He's on his board right in front of their car. He holds on to the hood since he can't get away.)</p>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h2>Randomly generated number</h2> 
+					<p id="computer-number">0</p>
+				</div>
+				<div class="col-lg-3">
+					<p>Wins and Losses box</p>
+					<p>
+						Wins: <span id="wins">0</span>
+					</p>
+					<p>
+						Losses: <span id="losses">0</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="container text-center" id="fourCrystals">
+			<img src="images/green.jpg" class="crystal" />
+			<img src="images/blue.jpg" class="crystal" />
+			<img src="images/pink.jpg" class="crystal" />
+			<img src="images/teal.jpg" class="crystal" />
+		</div>
+		<div class="card ">
+			<div class="row">
+				<div class="card-body">
+					<div class="col-lg-4">
+						<h4 class="card-title">
+							Your total score is:
+						</h4>
+						<p id="total">0</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
